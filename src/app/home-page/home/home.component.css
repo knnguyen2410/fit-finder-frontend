@@ -9,7 +9,7 @@
 
 .about-text {
     position: absolute;
-    top: -40%;
+    top: -50%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -35,7 +35,7 @@
 
 #col-subtitle {
     font-size: 1.25vw;
-    max-width: 300px;
+    max-width: 350px;
     margin-left: auto;
     margin-right: auto;
 }
