@@ -4,13 +4,15 @@ import { HeroComponent } from './hero/hero.component';
 import { HomeComponent } from './home/home.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FeaturedGymsComponent } from './featured-gyms/featured-gyms.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
     HeroComponent,
     HomeComponent,
     SearchBarComponent,
-    FeaturedGymsComponent
+    FeaturedGymsComponent,
+    BannerComponent
   ],
   imports: [
     CommonModule
