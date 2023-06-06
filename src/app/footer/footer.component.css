@@ -3,7 +3,7 @@ img {
     max-height: 40px;
 }
 
-footer {
+/* footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,4 +11,4 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-}
+} */
