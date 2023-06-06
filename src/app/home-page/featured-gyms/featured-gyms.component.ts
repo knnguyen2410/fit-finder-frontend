@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './featured-gyms.component.html',
   styleUrls: ['./featured-gyms.component.css']
 })
-export class FeaturedGymsComponent {
-
-}
+export class FeaturedGymsComponent {}
