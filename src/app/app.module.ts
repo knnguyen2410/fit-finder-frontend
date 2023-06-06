@@ -11,6 +11,7 @@ import { GymsComponent } from './gyms/gyms.component';
 import { OwnersComponent } from './owners/owners.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomePageModule
+    HomePageModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
