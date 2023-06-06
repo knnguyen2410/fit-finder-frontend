@@ -1,14 +1,12 @@
 img {
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 20px;
+    max-height: 20px;
 }
 
-/* footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-} */
+.btn {
+    padding: 5px;
+}
+
+.copyright {
+    font-size: 10px;
+}

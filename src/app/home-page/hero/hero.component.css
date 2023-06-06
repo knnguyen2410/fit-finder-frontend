@@ -6,6 +6,7 @@
 #hero-video {
     width: 100%;
     height: auto;
+    z-index: 0;
 }
 
 .hero-text {
@@ -15,4 +16,14 @@
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+}
+
+#title {
+    font-size: 70px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0);
+}
+
+#subtitle {
+    font-size: 25px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0);
 }
