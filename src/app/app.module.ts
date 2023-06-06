@@ -7,13 +7,21 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePageModule } from './home-page/home-page.module';
 import { AboutComponent } from './about/about.component';
+import { GymsComponent } from './gyms/gyms.component';
+import { OwnersComponent } from './owners/owners.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    GymsComponent,
+    OwnersComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
