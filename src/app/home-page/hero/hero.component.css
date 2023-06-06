@@ -19,11 +19,11 @@
 }
 
 #title {
-    font-size: 70px;
+    font-size: 5vw;
     text-shadow: 1px 1px 0px rgba(0, 0, 0);
 }
 
 #subtitle {
-    font-size: 25px;
+    font-size: 2vw;
     text-shadow: 1px 1px 0px rgba(0, 0, 0);
 }
