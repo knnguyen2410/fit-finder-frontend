@@ -8,6 +8,7 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./gyms.component.css']
 })
 export class GymsComponent implements OnInit {
+  
   gymList: Gym[] = [];
 
   constructor(private apiService: ApiService){}

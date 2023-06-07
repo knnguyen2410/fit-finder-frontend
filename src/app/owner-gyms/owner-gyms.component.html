@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
   
-        <div class="col" *ngFor="let gym of gymList">
+        <div class="col" *ngFor="let gym of ownerGymList">
           <div class="card shadow-sm mb-4">
             <img class="bd-placeholder-img card-img-top" src="{{gym.image}}" alt="Thumbnail">
             <div class="card-body">
@@ -16,7 +16,6 @@
             </div>
           </div>
         </div>
-  
       </div>
     </div>
   </div>
