@@ -13,6 +13,7 @@ export class ApiService {
   // owner
   // register
   // login
+  
   getOwnerById(ownerId: number) {
     return this.http.get(`http://localhost:8080/api/owners/${ownerId}`);
   } 
