@@ -3,10 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home-page/home/home.component';
 import { AboutComponent } from './about/about.component';
 import { GymsComponent } from './gyms/gyms.component';
-import { OwnersComponent } from './owners/owners.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { GymComponent } from './gym/gym.component';
+import { OwnerComponent } from './owner/owner.component';
+import { OwnerGymsComponent } from './owner-gyms/owner-gyms.component';
 
 const routes: Routes = [
   {
@@ -19,8 +20,12 @@ const routes: Routes = [
   },
   {
     path: 'gyms',
-    component: GymsComponent,
     children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        component: GymsComponent,
+      },
       {
         path: ':gymId',
         component: GymComponent
@@ -29,7 +34,6 @@ const routes: Routes = [
   },
   {
     path: 'owners',
-    component: OwnersComponent,
     children: [
       {
         path: 'login',
@@ -38,6 +42,16 @@ const routes: Routes = [
       {
         path: 'register',
         component: RegisterComponent
+      },
+      {
+        path:':ownerId', 
+        component: OwnerComponent,
+        children: [
+          {
+            path: 'gyms',
+            component: OwnerGymsComponent
+          }
+        ]
       }
     ]
   },

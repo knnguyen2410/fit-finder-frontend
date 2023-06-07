@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GymComponent } from './gym/gym.component';
+import { OwnerComponent } from './owner/owner.component';
+import { OwnerGymsComponent } from './owner-gyms/owner-gyms.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { GymComponent } from './gym/gym.component';
     OwnersComponent,
     LoginComponent,
     RegisterComponent,
-    GymComponent
+    GymComponent,
+    OwnerComponent,
+    OwnerGymsComponent
   ],
   imports: [
     BrowserModule,
