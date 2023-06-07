@@ -9,18 +9,25 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./owner-gyms.component.css']
 })
 export class OwnerGymsComponent implements OnInit{
-
+  owner: any;
   ownerGymList: Gym[] = [];
 
   constructor(private route: ActivatedRoute, private apiService: ApiService){}
 
-  ngOnInit(){
+  ngOnInit() {
     this.route.parent?.paramMap.subscribe(params => {
       const paramId: string = params.get('ownerId') || '';
+  
+      this.apiService.getOwnerById(parseInt(paramId)).subscribe((owner: any) => {
+        this.owner = owner;
+        console.log(owner);
+      });
+  
       this.apiService.getAllGymsByOwnerId(parseInt(paramId)).subscribe((ownerGyms: any) => {
         this.ownerGymList = ownerGyms;
         console.log(ownerGyms.ownerId);
       });
     });
   }
+    
 }
