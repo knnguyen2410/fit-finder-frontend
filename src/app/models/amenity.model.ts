@@ -1,4 +1,4 @@
-export interface Equipment {
+export interface Amenity {
     category: string,
     subcategory: string,
     name: string,
