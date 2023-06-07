@@ -19,8 +19,12 @@ const routes: Routes = [
   },
   {
     path: 'gyms',
-    component: GymsComponent,
     children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        component: GymsComponent,
+      },
       {
         path: ':gymId',
         component: GymComponent

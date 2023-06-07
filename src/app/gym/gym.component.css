@@ -1,0 +1,12 @@
+.hero-container {
+    overflow: hidden;
+  }
+  
+  .hero-container .hero-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
