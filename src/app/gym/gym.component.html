@@ -4,6 +4,7 @@
     <div class="hero-container p-4 p-md-5 mb-4 rounded text-body-emphasis bg-dark">
         <div class="col-lg-12 px-0 text-white">
           <img src="{{ gym.image }}" alt="Thumbnail" class="hero-image">
+          <br>
           <h1 class="display-4 fst-italic">{{ gym.name }}</h1>
           <h3 class="fst-italic">{{ gym.category }}</h3>
           <br>
@@ -11,7 +12,7 @@
             {{ gym.details }}
             <br>
             {{ gym.hours }}
-        </p>
+          </p>
           <br>
           <p class="lead mb-0">
             {{ gym.addressStreet }}
@@ -22,42 +23,17 @@
             <br>
             {{ gym.phone }}
             </p>
-        </div>
-      </div>
-      
 
-<div class="row mb-2">
-  <div class="col-md-6">
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-      <div class="col p-4 d-flex flex-column position-static">
-        <h3 class="mb-0">Equipment</h3>
-        <br>
-        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-          See all equipment
-          <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-        </a>
-      </div>
-      <div class="col-auto d-none d-lg-block">
-        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-      <div class="col p-4 d-flex flex-column position-static">
-        <h3 class="mb-0">Amenities</h3>
-        <br>
-        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-          See all amenities
-          <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-        </a>
-      </div>
-      <div class="col-auto d-none d-lg-block">
-        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="text-center">
+              <a routerLink="/gyms/{{gym.id}}/equipment">   
+                <button type="button" class="ms-5 btn btn-light">See All Equipment</button>       
+              </a>
+  
+              <a routerLink="/gyms/{{gym.id}}/amenities">          
+                <button type="button" class="ms-5 btn btn-light">See All Amenities</button>
+              </a>
+            </div>
+        </div>
+      </div>      
 </main>
+<router-outlet></router-outlet>

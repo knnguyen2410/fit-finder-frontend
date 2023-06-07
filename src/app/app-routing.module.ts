@@ -8,6 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { GymComponent } from './gym/gym.component';
 import { OwnerComponent } from './owner/owner.component';
 import { OwnerGymsComponent } from './owner-gyms/owner-gyms.component';
+import { EquipmentAllComponent } from './equipment-all/equipment-all.component';
+import { AmenitiesComponent } from './amenities/amenities.component';
 
 const routes: Routes = [
   {
@@ -28,7 +30,17 @@ const routes: Routes = [
       },
       {
         path: ':gymId',
-        component: GymComponent
+        component: GymComponent,
+        children: [
+          {
+            path: 'equipment',
+            component: EquipmentAllComponent
+          },
+          {
+            path: 'amenities',
+            component: AmenitiesComponent
+          }
+        ]
       }
     ]
   },

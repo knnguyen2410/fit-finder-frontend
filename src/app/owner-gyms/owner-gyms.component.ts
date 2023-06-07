@@ -25,7 +25,7 @@ export class OwnerGymsComponent implements OnInit{
   
       this.apiService.getAllGymsByOwnerId(parseInt(paramId)).subscribe((ownerGyms: any) => {
         this.ownerGymList = ownerGyms;
-        console.log(ownerGyms.ownerId);
+        console.log(ownerGyms);
       });
     });
   }

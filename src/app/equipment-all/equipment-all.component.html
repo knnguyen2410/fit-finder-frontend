@@ -1,1 +1,22 @@
-<p>equipment-all works!</p>
+<div class="album py-5">
+
+    <h1 class="gyms-title">All Equipment</h1>
+    <br>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  
+        <div class="col" *ngFor="let equipment of equipmentList">
+          <div class="card shadow-sm mb-4">
+            <img class="bd-placeholder-img card-img-top" src="{{equipment.image}}" alt="Thumbnail">
+            <div class="card-body">
+                 <h1>{{ equipment.name }}</h1>
+                 <h4>{{ equipment.category }}: {{ equipment.brand }}</h4>
+                <p>{{ equipment.details }}</p>
+                <p class="text-end">Quantity: {{ equipment.quantity }}</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
