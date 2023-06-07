@@ -1,13 +1,28 @@
 <br>
 <br>
-<main class="container">
-    <div class="hero-container p-4 p-md-5 mb-4 rounded text-body-emphasis bg-dark">
-        <div class="col-lg-12 px-0 text-white">
-          <h1 class="display-4 fst-italic">{{ owner.name }}</h1>
-          <h3 class="fst-italic">{{ owner.email }}</h3>
-          <a routerLink="/owners/{{owner.id}}/gyms">
-            <h4 class="fst-italic">See all gyms</h4>
-          </a>
-        </div>
+
+<div class="container col-xxl-8 px-4 py-5 rounded bg-dark container-hero">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+       <img src="{{ owner.image }}" class="profile d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
+    <div class="col-lg-6 text-center">
+      <h1 class="owner-title">Gym Owner Profile</h1>
+      <br>
+      <br>
+      <br>
+      <h1>{{ owner.name }}</h1>
+      <p class="lead">{{ owner.email }}</p>
+      <br>
+      <br>
+      <br>
+      <div class="d-grid gap-2 d-md-flex justify-content-center">
+        <a routerLink="/owners/{{owner.id}}/gyms">   
+          <button type="button" class="btn btn-light btn-lg px-4">See My Gyms</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <router-outlet></router-outlet>
