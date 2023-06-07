@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FeaturedGymsComponent } from './featured-gyms/featured-gyms.component';
 import { BannerComponent } from './banner/banner.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BannerComponent } from './banner/banner.component';
     BannerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class HomePageModule { }

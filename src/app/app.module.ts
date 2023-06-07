@@ -12,6 +12,7 @@ import { OwnersComponent } from './owners/owners.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GymComponent } from './gym/gym.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     GymsComponent,
     OwnersComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    GymComponent
   ],
   imports: [
     BrowserModule,
