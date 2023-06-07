@@ -1,57 +1,30 @@
 <section class="featured-gyms-container">
-    <div>
-        <br>
-        <h1>Featured Gyms</h1>
-    </div>
-    
-  <div class="album py-5">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" src="" alt="Thumbnail">
-            <div class="card-body">
-              <p class="card-text"><strong>Gym Name</strong>, description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a routerLink="/cities/1"><button type="button" class="btn btn-sm btn-outline-dark">Learn More</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col">
-          <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" src="" alt="Thumbnail">
-            <div class="card-body">
-              <p class="card-text"><strong>Gym Name</strong>, description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a routerLink="/cities/2"><button type="button" class="btn btn-sm btn-outline-dark">Learn More</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" src="" alt="Thumbnail">
-            <div class="card-body">
-              <p class="card-text"><strong>Gym Name</strong>, description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a routerLink="/cities/3"><button type="button" class="btn btn-sm btn-outline-dark">Learn More</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
+  <div>
+      <br>
+      <h1>Featured Gyms</h1>
   </div>
   
+<div class="album py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+      <div class="col" *ngFor="let gym of gymList; let i = index">
+        <div class="card shadow-sm mb-4" *ngIf="i < 3">
+          <img class="bd-placeholder-img card-img-top" src="{{gym.image}}" alt="Thumbnail">
+          <div class="card-body">
+             <p class="card-text">{{gym.name}}</p>
+             <p>{{ gym.details }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a routerLink="/cities/1"><button type="button" class="btn btn-sm btn-outline-light">Learn More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 </section>
