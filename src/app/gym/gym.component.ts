@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Gym } from '../models/gym.model';
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -8,7 +7,7 @@ import { ApiService } from '../services/api.service';
   templateUrl: './gym.component.html',
   styleUrls: ['./gym.component.css']
 })
-export class GymComponent {
+export class GymComponent implements OnInit {
   gym: any;
 
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }

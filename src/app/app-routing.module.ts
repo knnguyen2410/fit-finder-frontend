@@ -7,6 +7,7 @@ import { OwnersComponent } from './owners/owners.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { GymComponent } from './gym/gym.component';
+import { OwnerComponent } from './owner/owner.component';
 
 const routes: Routes = [
   {
@@ -33,8 +34,11 @@ const routes: Routes = [
   },
   {
     path: 'owners',
-    component: OwnersComponent,
     children: [
+      {
+        path:':ownerId', 
+        component: OwnerComponent
+      },
       {
         path: 'login',
         component: LoginComponent
