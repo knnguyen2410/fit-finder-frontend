@@ -7,6 +7,9 @@
           <br>
           <h1 class="display-4 fst-italic">{{ gym.name }}</h1>
           <h3 class="fst-italic">{{ gym.category }}</h3>
+          <a routerLink="/owners/{{gym.owner.id}}/">
+            <p class="owner-link">Owned by {{ gym.owner.name }}</p>
+          </a>
           <br>
           <p class="lead mb-0">
             {{ gym.details }}
@@ -23,7 +26,8 @@
             <br>
             {{ gym.phone }}
             </p>
-
+            <br>
+            <br>
             <div class="text-center">
               <a routerLink="/gyms/{{gym.id}}/equipment">   
                 <button type="button" class="ms-5 btn btn-light">See All Equipment</button>       
