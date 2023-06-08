@@ -17,6 +17,7 @@ export class LoginComponent {
     this.apiService.login(this.loginRequest).subscribe((data: any) => 
       {
         localStorage.setItem('jwt', data.message);
+        console.log(data.message);
       });
   }
 }
