@@ -6,6 +6,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FeaturedGymsComponent } from './featured-gyms/featured-gyms.component';
 import { BannerComponent } from './banner/banner.component';
 import { RouterModule } from '@angular/router';
+import { SearchResultComponent } from './search-result/search-result.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,11 +15,13 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     SearchBarComponent,
     FeaturedGymsComponent,
-    BannerComponent
+    BannerComponent,
+    SearchResultComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
   ]
 })
 export class HomePageModule { }

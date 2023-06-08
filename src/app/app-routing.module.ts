@@ -10,6 +10,7 @@ import { OwnerComponent } from './owner/owner.component';
 import { OwnerGymsComponent } from './owner-gyms/owner-gyms.component';
 import { EquipmentAllComponent } from './equipment-all/equipment-all.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
+import { SearchResultComponent } from './home-page/search-result/search-result.component';
 
 const routes: Routes = [
   {
@@ -67,6 +68,10 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'search',
+    component: SearchResultComponent
+  }
 ];
 
 @NgModule({
