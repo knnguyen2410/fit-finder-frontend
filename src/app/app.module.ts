@@ -17,9 +17,6 @@ import { OwnerComponent } from './owner/owner.component';
 import { OwnerGymsComponent } from './owner-gyms/owner-gyms.component';
 import { EquipmentAllComponent } from './equipment-all/equipment-all.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
-import { SearchResultComponent } from './search-result/search-result.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,15 +32,12 @@ import { FormsModule } from '@angular/forms';
     OwnerComponent,
     OwnerGymsComponent,
     EquipmentAllComponent,
-    AmenitiesComponent,
-    SearchBarComponent,
-    SearchResultComponent
+    AmenitiesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
     HomePageModule
   ],
   providers: [],

@@ -5,6 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { FeaturedGymsComponent } from './featured-gyms/featured-gyms.component';
 import { BannerComponent } from './banner/banner.component';
 import { RouterModule } from '@angular/router';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -12,12 +14,14 @@ import { FormsModule } from '@angular/forms';
     HeroComponent,
     HomeComponent,
     FeaturedGymsComponent,
-    BannerComponent
+    BannerComponent,
+    SearchBarComponent,
+    SearchResultComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule,
+    FormsModule
   ]
 })
 export class HomePageModule { }

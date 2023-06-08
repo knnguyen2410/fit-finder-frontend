@@ -9,7 +9,7 @@ import { OwnerComponent } from './owner/owner.component';
 import { OwnerGymsComponent } from './owner-gyms/owner-gyms.component';
 import { EquipmentAllComponent } from './equipment-all/equipment-all.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
-import { SearchResultComponent } from './search-result/search-result.component';
+import { SearchResultComponent } from './home-page/search-result/search-result.component';
 import { HomeComponent } from './home-page/home/home.component';
 
 const routes: Routes = [
