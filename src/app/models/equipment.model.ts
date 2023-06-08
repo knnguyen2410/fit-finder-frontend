@@ -4,5 +4,6 @@ export interface Equipment {
     name: string,
     quantity: number,
     details: string,
-    image: string
+    image: string,
+    gymId: number
 }

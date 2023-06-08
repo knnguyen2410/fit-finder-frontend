@@ -4,5 +4,6 @@ export interface Amenity {
     name: string,
     quantity: number,
     details: string,
-    image: string
+    image: string,
+    gymId: number
 }
