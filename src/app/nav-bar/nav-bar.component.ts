@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
 
+  hasJWT(): boolean {
+    let jwt = localStorage.getItem('jwt');
+    return jwt !== null && jwt !== undefined && jwt !== '';
+  }
+
+  clearJWT() {
+    localStorage.removeItem('jwt');
+  }
 }

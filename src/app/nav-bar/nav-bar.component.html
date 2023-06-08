@@ -14,12 +14,21 @@
                 <li class="nav-item ms-lg-5">
                     <a routerLink="/gyms" class="nav-link fw-bold fs-5 text-white" aria-current="page" href="#">GYMS</a>
                 </li>  
+
+                <div *ngIf="hasJWT() == false">
                 <li class="nav-item ms-lg-5">
                     <a routerLink="/owners/login" class="nav-link fw-bold fs-5 text-white" aria-current="page" href="#">LOG IN</a>
                 </li>
                 <li class="nav-item ms-lg-5">
                     <a routerLink="/owners/register" class="nav-link fw-bold fs-5 text-white" aria-current="page" href="#">REGISTER</a>
                 </li>
+                </div>
+
+                <div *ngIf="hasJWT() == true">
+                    <li class="nav-item ms-lg-5">
+                        <a (click)="clearJWT()" routerLink="" class="nav-link fw-bold fs-5 text-white" aria-current="page" href="#">SIGN OUT</a>
+                    </li>
+                </div>
             </ul>
         </div>
     </div>
