@@ -55,7 +55,7 @@ export class GymsComponent implements OnInit {
 
   onSubmit(){
     if (this.hasJWT() == true) {
-      let loggedInOwner = this.ownerList.find(owner => owner.email === localStorage.getItem('email'))
+      let loggedInOwner = this.ownerList.find(owner => owner.email === localStorage.getItem('email'));
       if (loggedInOwner) {
         this.loggedInOwner = loggedInOwner;
         console.log(this.loggedInOwner);

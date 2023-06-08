@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Equipment } from '../models/equipment.model';
 import { ApiService } from '../services/api.service';
 import { Gym } from '../models/gym.model';
+import { Owner } from '../models/owner.model';
 
 @Component({
   selector: 'app-equipment-all',
@@ -54,9 +55,9 @@ export class EquipmentAllComponent implements OnInit {
         this.apiService.createEquipmentByGymId(this.currentGymId, this.createdEquipment).subscribe((response: any) => {
           location.reload();
           console.log(response);
-        });
-      }
+        }); 
     }
+  }
 
   hasJWT(): boolean {
     let jwt = localStorage.getItem('jwt');
