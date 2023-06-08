@@ -28,15 +28,15 @@ export class GymsComponent implements OnInit {
     phone: '',
     details: '',
     image: '',
-    // owner: {
-    //   id: 0,
-    //   name: '',
-    //   email: '',
-    //   password: '',
-    //   image: ''
-    // },
-    // equipmentList: [],
-    // amenityList: [],
+    owner: {
+      id: 0,
+      name: '',
+      email: '',
+      password: '',
+      image: ''
+    },
+    equipmentList: [],
+    amenityList: [],
   }
 
   constructor(private router: Router, private apiService: ApiService){}
