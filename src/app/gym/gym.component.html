@@ -37,6 +37,16 @@
                 <button type="button" class="ms-5 btn btn-light">See All Amenities</button>
               </a>
             </div>
+            <br>
+            <div *ngIf="hasJWT() == true" class="text-center">
+              <a routerLink="/gyms/{{gym.id}}/equipment">   
+                <button type="button" class="ms-5 btn btn-light">Create Equipment</button>       
+              </a>
+  
+              <a routerLink="/gyms/{{gym.id}}/amenities">          
+                <button type="button" class="ms-5 btn btn-light">Create An Amenity</button>
+              </a>
+            </div>
         </div>
       </div>      
 </main>
