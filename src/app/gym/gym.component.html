@@ -29,13 +29,21 @@
             <br>
             <br>
             <div class="text-center">
-              <a routerLink="/gyms/{{gym.id}}/equipment">   
-                <button type="button" class="ms-5 btn btn-light">See All Equipment</button>       
-              </a>
-  
-              <a routerLink="/gyms/{{gym.id}}/amenities">          
-                <button type="button" class="ms-5 btn btn-light">See All Amenities</button>
-              </a>
+              <div class="publicButtons">
+                <a routerLink="/gyms/{{gym.id}}/equipment">   
+                  <button type="button" class="ms-5 btn btn-light">See All Equipment</button>       
+                </a>
+    
+                <a routerLink="/gyms/{{gym.id}}/amenities">          
+                  <button type="button" class="ms-5 btn btn-light">See All Amenities</button>
+                </a>
+              </div>
+
+              <div *ngIf="hasJWT() == true">
+                <a routerLink="/gyms">          
+                  <button (click)="onSubmit()" class="ms-5 btn btn-light">Delete Gym</button>
+                </a>
+              </div>
             </div>
         </div>
       </div>      

@@ -29,10 +29,4 @@ export class OwnerGymsComponent implements OnInit{
       });
     });
   }
-
-  hasJWT(): boolean {
-    let jwt = localStorage.getItem('jwt');
-    return jwt !== null && jwt !== undefined && jwt !== '';
-  }
-    
 }
