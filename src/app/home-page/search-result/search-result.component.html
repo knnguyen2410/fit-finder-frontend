@@ -1,6 +1,12 @@
+<br>
+<br>
 <h1 class="gyms-title text-center">Search Results</h1>
 <br>
-<div class="container-lg" *ngFor="let gym of gymList">
+<div class="container-lg">
+  <app-search-bar></app-search-bar>
+</div>
+<br>
+<div class="container-lg" *ngFor="let gym of filteredGymList">
     <div class="container-lg">
       <div class="row mb-2">
         <div class="col-md-12">

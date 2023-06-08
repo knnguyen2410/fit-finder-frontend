@@ -15,5 +15,7 @@ export class SearchBarComponent {
     this.router.navigate(['/search'], {
       queryParams: { searchBy: searchInput }
     })    
+    console.log("Search Bar Input: " + searchInput);
+
   }
 }
