@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
       console.log(this.owner);
 
       if (response.id !== null) {
-        this.router.navigate(['']);
+        this.router.navigate(['/owners/login']);
       }
     });
   }  
