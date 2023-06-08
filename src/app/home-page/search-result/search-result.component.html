@@ -1,12 +1,12 @@
 <br>
-<app-search-bar></app-search-bar>
 <br>
+<h1 class="gyms-title text-center">Search Results</h1>
 <br>
 <div class="container-lg" *ngFor="let gym of gymList">
     <div class="container-lg">
       <div class="row mb-2">
         <div class="col-md-12">
-          <a routerLink="gyms/{{gym.id}}">
+          <a routerLink="/gyms/{{gym.id}}">
             <div class="gym-container row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col-auto d-none d-lg-block">
                 <img src="{{gym.image}}" alt="image of the city" width="200" height="125">

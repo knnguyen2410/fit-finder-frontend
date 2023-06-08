@@ -30,20 +30,20 @@ export class SearchResultComponent implements OnInit {
   }
 
   findGyms(searchTerm: string): void {
-    this.gymList = this.gymList.filter(gym =>
-      gym.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      gym.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      gym.addressStreet.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      gym.addressCity.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      gym.addressState.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      gym.addressZip.toString().toLowerCase().includes(searchTerm.toLowerCase()) ||
-      gym.hours.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      gym.phone.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      gym.details.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      gym.owner.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      this.searchEquipmentList(gym.equipmentList, searchTerm) ||
-      this.searchAmenityList(gym.amenityList, searchTerm)
-    );
+      this.gymList = this.gymList.filter(gym =>
+        gym.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        gym.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        gym.addressStreet.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        gym.addressCity.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        gym.addressState.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        gym.addressZip.toString().toLowerCase().includes(searchTerm.toLowerCase()) ||
+        gym.hours.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        gym.phone.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        gym.details.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        gym.owner.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        this.searchEquipmentList(gym.equipmentList, searchTerm) ||
+        this.searchAmenityList(gym.amenityList, searchTerm)
+      );
   }
   
   searchEquipmentList(equipmentList: Equipment[], searchTerm: string): boolean {
