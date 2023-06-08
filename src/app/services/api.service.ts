@@ -19,6 +19,10 @@ export class ApiService {
     console.log(loginRequest);
     return this.http.post(`http://localhost:8080/api/owners/login`, loginRequest);
   }
+
+  getAllOwners() {
+    return this.http.get(`http://localhost:8080/api/owners`);
+  }
   
   getOwnerById(ownerId: number) {
     return this.http.get(`http://localhost:8080/api/owners/${ownerId}`);

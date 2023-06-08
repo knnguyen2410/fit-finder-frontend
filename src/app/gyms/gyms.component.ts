@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Gym } from '../models/gym.model';
 import { ApiService } from '../services/api.service';
-import { SearchBarComponent } from '../home-page/search-bar/search-bar.component';
 
 @Component({
   selector: 'app-gyms',
