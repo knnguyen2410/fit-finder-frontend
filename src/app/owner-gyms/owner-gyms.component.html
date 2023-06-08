@@ -16,6 +16,9 @@
               <div class="btn-group">
                 <a routerLink="/gyms/{{gym.id}}"><button type="button" class="btn btn-sm btn-outline-light">Learn More</button></a>
               </div>
+              <div *ngIf="hasJWT() == true" class="btn-group">
+                <a routerLink="/owners/{{gym.owner.id}}/gyms"><button type="button" class="btn btn-sm btn-outline-light">Delete Gym</button></a>
+              </div>
             </div>
           </div>
         </div>
