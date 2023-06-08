@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home-page/home/home.component';
 import { AboutComponent } from './about/about.component';
 import { GymsComponent } from './gyms/gyms.component';
 import { LoginComponent } from './login/login.component';
@@ -8,6 +7,10 @@ import { RegisterComponent } from './register/register.component';
 import { GymComponent } from './gym/gym.component';
 import { OwnerComponent } from './owner/owner.component';
 import { OwnerGymsComponent } from './owner-gyms/owner-gyms.component';
+import { EquipmentAllComponent } from './equipment-all/equipment-all.component';
+import { AmenitiesComponent } from './amenities/amenities.component';
+import { SearchResultComponent } from './home-page/search-result/search-result.component';
+import { HomeComponent } from './home-page/home/home.component';
 
 const routes: Routes = [
   {
@@ -28,7 +31,17 @@ const routes: Routes = [
       },
       {
         path: ':gymId',
-        component: GymComponent
+        component: GymComponent,
+        children: [
+          {
+            path: 'equipment',
+            component: EquipmentAllComponent
+          },
+          {
+            path: 'amenities',
+            component: AmenitiesComponent
+          }
+        ]
       }
     ]
   },
@@ -55,6 +68,10 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'search',
+    component: SearchResultComponent
+  }
 ];
 
 @NgModule({
