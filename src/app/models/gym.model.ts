@@ -10,4 +10,7 @@ export interface Gym {
         phone: string,
         details: string,
         image: string,
+        owner: any,
+        equipmentList: any,
+        amenityList: any,
 }

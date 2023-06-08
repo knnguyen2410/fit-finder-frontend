@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent {
-  gymName: string = '';
+  searchInput: string = '';
 
   constructor(private router: Router) {}
 
-  searchGymName(gymName: string): void {
+  searchFunction(searchInput: string): void {
     this.router.navigate(['/search'], {
-      queryParams: { searchTerm: gymName }
+      queryParams: { searchBy: searchInput }
     })    
   }
 }

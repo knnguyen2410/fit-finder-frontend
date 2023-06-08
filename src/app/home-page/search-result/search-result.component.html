@@ -1,4 +1,4 @@
-<div class="container-lg" *ngFor="let gym of gymList">
+<!-- <div class="container-lg" *ngFor="let gym of gymList">
     <div class="container-lg">
       <div class="row mb-2">
         <div class="col-md-12">
@@ -14,4 +14,50 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+  <!-- Owner Results
+
+  <div class="container-lg" *ngFor="let owner of ownerList">
+    <p>{{owner.name}}</p>
+    <p>{{owner.email}}</p>
+    <p>{{owner.password}}</p>
+    <img src="{{owner.image}}" alt="">
+  </div> -->
+
+  Gym Results
+
+  <div class="container-lg" *ngFor="let gym of gymList">
+    <p>{{gym.name}}</p>
+    <p>{{gym.category}}</p>
+    <p>{{gym.addressStreet}}</p>
+    <p>{{gym.addressCity}}</p>
+    <p>{{gym.addressState}}</p>
+    <p>{{gym.addressZip}}</p>
+    <p>{{gym.hours}}</p>
+    <p>{{gym.phone}}</p>
+    <p>{{gym.details}}</p>
+    <img src="{{gym.image}}" alt="">
   </div>
+
+  <!-- Equipment Results
+
+  <div class="container-lg" *ngFor="let equipment of equipmentList">
+    <p>{{equipment.category}}</p>
+    <p>{{equipment.brand}}</p>
+    <p>{{equipment.name}}</p>
+    <p>{{equipment.quantity}}</p>
+    <p>{{equipment.details}}</p>
+    <img src="{{equipment.image}}" alt="">
+  </div> -->
+
+  <!-- Amenity Results
+
+  <div class="container-lg" *ngFor="let amenity of amenityList">
+    <p>{{amenity.category}}</p>
+    <p>{{amenity.subcategory}}</p>
+    <p>{{amenity.name}}</p>
+    <p>{{amenity.quantity}}</p>
+    <p>{{amenity.details}}</p>
+    <img src="{{amenity.image}}" alt="">
+  </div> -->
