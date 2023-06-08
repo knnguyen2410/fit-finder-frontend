@@ -22,6 +22,9 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     RouterModule,
     FormsModule
+  ],
+  exports: [
+    SearchBarComponent
   ]
 })
 export class HomePageModule { }
