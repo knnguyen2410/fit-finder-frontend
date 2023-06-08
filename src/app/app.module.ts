@@ -17,6 +17,7 @@ import { OwnerComponent } from './owner/owner.component';
 import { OwnerGymsComponent } from './owner-gyms/owner-gyms.component';
 import { EquipmentAllComponent } from './equipment-all/equipment-all.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AmenitiesComponent } from './amenities/amenities.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HomePageModule
+    HomePageModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

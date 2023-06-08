@@ -4,20 +4,20 @@
         <h1 class="h3 mb-3 fw-normal text-center">Register</h1>
         <br>
         <div class="form-floating">
-          <input type="text" class="bg-dark form-control text-white" id="floatingName" placeholder="First Last">
+          <input [(ngModel)]="name" type="text" class="bg-dark form-control text-white" id="floatingName" placeholder="First Last">
           <label for="floatingName">Name</label>
         </div>
         <div class="form-floating">
-          <input type="email" class="bg-dark form-control text-white" id="floatingEmail" placeholder="name@example.com">
+          <input [(ngModel)]="email" type="email" class="bg-dark form-control text-white" id="floatingEmail" placeholder="name@example.com">
           <label for="floatingEmail">Email address</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="bg-dark form-control text-white" id="floatingPassword" placeholder="Password">
+          <input [(ngModel)]="password" type="password" class="bg-dark form-control text-white" id="floatingPassword" placeholder="Password">
           <label for="floatingPassword">Password</label>
         </div>
         <div class="form-floating">
-          <input type="text" class="bg-dark form-control text-white" id="floatingPicture" placeholder="Image URL">
-          <label for="floatingPicture">Profile Picture</label>
+          <input [(ngModel)]="image" type="text" class="bg-dark form-control text-white" id="floatingImage" placeholder="Image URL">
+          <label for="floatingImage">Profile Picture</label>
         </div>
         <button class="btn btn-secondary w-100 py-2" type="submit">Register</button>
       </form>

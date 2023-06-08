@@ -15,8 +15,9 @@ export class ApiService {
     return this.http.post(`http://localhost:8080/api/owners/register`, ownerObject);
   }
 
-  login(ownerObject: any) {
-    return this.http.post(`http://localhost:8080/api/owners/login`, ownerObject);
+  login(loginRequest: any) {
+    console.log(loginRequest);
+    return this.http.post(`http://localhost:8080/api/owners/login`, loginRequest);
   }
   
   getOwnerById(ownerId: number) {
@@ -49,60 +50,71 @@ export class ApiService {
   // private endpoints
 
   // owner
-  updateOwnerById(ownerId: number, ownerObject: any, token: string) {
+  updateOwnerById(ownerId: number, ownerObject: any) {
+    let token = localStorage.getItem('jwt');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.put(`http://localhost:8080/api/owners/${ownerId}`, ownerObject, { headers });
   }
 
-  deleteOwnerById(ownerId: number, token: string) {
+  deleteOwnerById(ownerId: number) {
+    let token = localStorage.getItem('jwt');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.delete(`http://localhost:8080/api/owners/${ownerId}`, { headers });
   }
 
   // gym
-  createGym(gymObject: any, token: string) {
+  createGym(gymObject: any) {
+    let token = localStorage.getItem('jwt');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.post(`http://localhost:8080/api/gyms`, gymObject, { headers });
   }
 
-  updateGymById(gymId: number, gymObject: any, token: string) {
+  updateGymById(gymId: number, gymObject: any) {
+    let token = localStorage.getItem('jwt');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.put(`http://localhost:8080/api/gyms/${gymId}`, gymObject, { headers });
   }
 
-  deleteGymById(gymId: number, token: string) {
+  deleteGymById(gymId: number) {
+    let token = localStorage.getItem('jwt');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.delete(`http://localhost:8080/api/gyms/${gymId}`, { headers });
   }
 
   // equipment
-  createEquipmentByGymId(gymId: number, equipmentObject: any, token: string) {
+  createEquipmentByGymId(gymId: number, equipmentObject: any) {
+    let token = localStorage.getItem('jwt');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.post(`http://localhost:8080/api/gyms/${gymId}/equipment/`, equipmentObject, { headers });
   }
 
-  updateEquipmentByGymId(gymId: number, equipmentId: number, equipmentObject: any, token: string) {
+  updateEquipmentByGymId(gymId: number, equipmentId: number, equipmentObject: any) {
+    let token = localStorage.getItem('jwt');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.put(`http://localhost:8080/api/gyms/${gymId}/equipment/${equipmentId}`, equipmentObject, { headers });
   }
 
-  deleteEquipmentByGymId(gymId: number, equipmentId: number, token: string) {
+  deleteEquipmentByGymId(gymId: number, equipmentId: number) {
+    let token = localStorage.getItem('jwt');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.delete(`http://localhost:8080/api/gyms/${gymId}/equipment/${equipmentId}`, { headers });
   }
 
   // amenity
-  createAmenityByGymId(gymId: number, amenityObject: any, token: string) {
+  createAmenityByGymId(gymId: number, amenityObject: any) {
+    let token = localStorage.getItem('jwt');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.post(`http://localhost:8080/api/gyms/${gymId}/amenities/`, amenityObject, { headers });
   }
 
-  updateAmenityByGymId(gymId: number, amenityId: number, amenityObject: any, token: string) {
+  updateAmenityByGymId(gymId: number, amenityId: number, amenityObject: any) {
+    let token = localStorage.getItem('jwt');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.put(`http://localhost:8080/api/gyms/${gymId}/amenities/${amenityId}`, amenityObject, { headers });
   }
 
-  deleteAmenityByGymId(gymId: number, amenityId: number, token: string) {
+  deleteAmenityByGymId(gymId: number, amenityId: number) {
+    let token = localStorage.getItem('jwt');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.delete(`http://localhost:8080/api/gyms/${gymId}/amenities/${amenityId}`, { headers });
   }
