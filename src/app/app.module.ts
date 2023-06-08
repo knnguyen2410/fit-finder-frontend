@@ -17,6 +17,9 @@ import { OwnerComponent } from './owner/owner.component';
 import { OwnerGymsComponent } from './owner-gyms/owner-gyms.component';
 import { EquipmentAllComponent } from './equipment-all/equipment-all.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,13 +35,16 @@ import { AmenitiesComponent } from './amenities/amenities.component';
     OwnerComponent,
     OwnerGymsComponent,
     EquipmentAllComponent,
-    AmenitiesComponent
+    AmenitiesComponent,
+    SearchBarComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomePageModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    HomePageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
