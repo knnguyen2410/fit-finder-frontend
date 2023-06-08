@@ -1,0 +1,12 @@
+.gym-container {
+    color: white;
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:hover .gym-container {
+    background-color: rgb(60, 60, 60);
+  }
+  

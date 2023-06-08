@@ -1,63 +1,24 @@
-<!-- <div class="container-lg" *ngFor="let gym of gymList">
+<br>
+<app-search-bar></app-search-bar>
+<br>
+<br>
+<div class="container-lg" *ngFor="let gym of gymList">
     <div class="container-lg">
       <div class="row mb-2">
         <div class="col-md-12">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col-auto d-none d-lg-block">
-              <img src="{{gym.image}}" alt="image of the city" width="200" height="125">
+          <a routerLink="gyms/{{gym.id}}">
+            <div class="gym-container row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col-auto d-none d-lg-block">
+                <img src="{{gym.image}}" alt="image of the city" width="200" height="125">
+              </div>
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">{{gym.name}}</h3>
+                  <p class="card-text mb-auto">{{gym.category}}</p>
+                  <p class="card-text mb-auto">{{gym.details}}</p>
+              </div>
             </div>
-            <div class="col p-4 d-flex flex-column position-static">
-                <h3 class="mb-0">{{gym.name}}</h3>
-              <p class="card-text mb-auto">{{gym.details}}</p>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
-  </div> -->
-
-  <!-- Owner Results
-
-  <div class="container-lg" *ngFor="let owner of ownerList">
-    <p>{{owner.name}}</p>
-    <p>{{owner.email}}</p>
-    <p>{{owner.password}}</p>
-    <img src="{{owner.image}}" alt="">
-  </div> -->
-
-  Gym Results
-
-  <div class="container-lg" *ngFor="let gym of gymList">
-    <p>{{gym.name}}</p>
-    <p>{{gym.category}}</p>
-    <p>{{gym.addressStreet}}</p>
-    <p>{{gym.addressCity}}</p>
-    <p>{{gym.addressState}}</p>
-    <p>{{gym.addressZip}}</p>
-    <p>{{gym.hours}}</p>
-    <p>{{gym.phone}}</p>
-    <p>{{gym.details}}</p>
-    <img src="{{gym.image}}" alt="">
   </div>
-
-  <!-- Equipment Results
-
-  <div class="container-lg" *ngFor="let equipment of equipmentList">
-    <p>{{equipment.category}}</p>
-    <p>{{equipment.brand}}</p>
-    <p>{{equipment.name}}</p>
-    <p>{{equipment.quantity}}</p>
-    <p>{{equipment.details}}</p>
-    <img src="{{equipment.image}}" alt="">
-  </div> -->
-
-  <!-- Amenity Results
-
-  <div class="container-lg" *ngFor="let amenity of amenityList">
-    <p>{{amenity.category}}</p>
-    <p>{{amenity.subcategory}}</p>
-    <p>{{amenity.name}}</p>
-    <p>{{amenity.quantity}}</p>
-    <p>{{amenity.details}}</p>
-    <img src="{{amenity.image}}" alt="">
-  </div> -->
