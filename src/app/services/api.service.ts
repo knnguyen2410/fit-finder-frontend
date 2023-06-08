@@ -11,8 +11,13 @@ export class ApiService {
   // public endpoints
 
   // owner
-  // register
-  // login
+  register(ownerObject: any) {
+    return this.http.post(`http://localhost:8080/api/owners/register`, ownerObject);
+  }
+
+  login(ownerObject: any) {
+    return this.http.post(`http://localhost:8080/api/owners/login`, ownerObject);
+  }
   
   getOwnerById(ownerId: number) {
     return this.http.get(`http://localhost:8080/api/owners/${ownerId}`);
@@ -55,6 +60,11 @@ export class ApiService {
   }
 
   // gym
+  createGym(gymObject: any, token: string) {
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.post(`http://localhost:8080/api/gyms`, gymObject, { headers });
+  }
+
   updateGymById(gymId: number, gymObject: any, token: string) {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.put(`http://localhost:8080/api/gyms/${gymId}`, gymObject, { headers });
@@ -66,6 +76,11 @@ export class ApiService {
   }
 
   // equipment
+  createEquipmentByGymId(gymId: number, equipmentObject: any, token: string) {
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.post(`http://localhost:8080/api/gyms/${gymId}/equipment/`, equipmentObject, { headers });
+  }
+
   updateEquipmentByGymId(gymId: number, equipmentId: number, equipmentObject: any, token: string) {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.put(`http://localhost:8080/api/gyms/${gymId}/equipment/${equipmentId}`, equipmentObject, { headers });
@@ -77,6 +92,11 @@ export class ApiService {
   }
 
   // amenity
+  createAmenityByGymId(gymId: number, amenityObject: any, token: string) {
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.post(`http://localhost:8080/api/gyms/${gymId}/amenities/`, amenityObject, { headers });
+  }
+
   updateAmenityByGymId(gymId: number, amenityId: number, amenityObject: any, token: string) {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.put(`http://localhost:8080/api/gyms/${gymId}/amenities/${amenityId}`, amenityObject, { headers });
