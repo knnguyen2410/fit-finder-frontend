@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
+import { Router } from '@angular/router';
 import { Owner } from '../models/owner.model';
 
 @Component({
@@ -17,7 +18,7 @@ export class RegisterComponent implements OnInit {
     image: ''
   }
 
-  constructor(private apiService: ApiService){}
+  constructor(private router: Router, private apiService: ApiService){}
 
   ngOnInit(){
     this.apiService.getAllOwners().subscribe((owners: any) => {
@@ -30,7 +31,10 @@ export class RegisterComponent implements OnInit {
     this.apiService.register(this.owner).subscribe((response: any) => {
       console.log(response);
       console.log(this.owner);
-      console.log(this.ownerList);
+
+      if (response.id !== null) {
+        this.router.navigate(['']);
+      }
     });
   }  
 }
