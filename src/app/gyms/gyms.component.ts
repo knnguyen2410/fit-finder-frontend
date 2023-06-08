@@ -1,22 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Gym } from '../models/gym.model';
 import { ApiService } from '../services/api.service';
 import { Router } from '@angular/router';
 import { Owner } from '../models/owner.model';
-import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-gyms',
   templateUrl: './gyms.component.html',
   styleUrls: ['./gyms.component.css']
 })
-export class GymsComponent implements OnInit {
-  ownerList: Owner[] = [];
-
+export class GymsComponent {
   gymList: Gym[] = [];
-  gymId: number = 0;
+  
+  ownerList: Owner[] = [];
+  loggedInOwner: any;
 
-  gym: Gym = {
+  createdGym: Gym = {
     id: 0,
     name: '',
     category: '',
@@ -28,44 +27,45 @@ export class GymsComponent implements OnInit {
     phone: '',
     details: '',
     image: '',
-    owner: '',
-    equipmentList: [],
-    amenityList: [],
+    // owner: {
+    //   id: 0,
+    //   name: '',
+    //   email: '',
+    //   password: '',
+    //   image: ''
+    // },
+    // equipmentList: [],
+    // amenityList: [],
   }
 
   constructor(private router: Router, private apiService: ApiService){}
 
-  ngOnInit(){
+  onSubmit(){
     this.apiService.getAllGyms().subscribe((gyms: any) => {
       this.gymList = gyms
       console.log(gyms);
     });
 
+    this.apiService.getAllOwners().subscribe((owners: any) => {
+      this.ownerList = owners;
+      console.log(owners);
+    });
+
     if (this.hasJWT() == true) {
-      let loggedInOwner = this.ownerList.find(owner => owner.email === LoginComponent.loginRequest.email)
+      let loggedInOwner = this.ownerList.find(owner => owner.email === localStorage.getItem('email'))
       if (loggedInOwner) {
-        this.ownerId = loggedInOwner.id;
-        this.router.navigate(['/owners', this.ownerId]);  
+        this.loggedInOwner = loggedInOwner;
+        console.log(this.loggedInOwner);
+
+        this.apiService.createGym(this.createdGym).subscribe((response: any) => {
+          console.log(response);
+        });
       }
     }
-    
   }
 
   hasJWT(): boolean {
     let jwt = localStorage.getItem('jwt');
     return jwt !== null && jwt !== undefined && jwt !== '';
   }
-
-  onSubmit() {
-    this.apiService.createGym(this.gym).subscribe((response: any) => {
-      console.log(response);
-      console.log(this.gym);
-
-      let createdGym = this.gymList.find(gym => gym.name === this.gym.name);
-      if (createdGym) {
-        this.gymId = createdGym.id;
-        this.router.navigate(['/gyms', this.gymId]);
-      }
-    });
-  }  
 }

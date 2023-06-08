@@ -38,10 +38,10 @@ export class SearchResultComponent implements OnInit {
         gym.name.toLowerCase().includes(searchInput.toLowerCase()) ||
         gym.category.toLowerCase().includes(searchInput.toLowerCase()) ||
         gym.addressCity.toLowerCase().includes(searchInput.toLowerCase()) ||
-        gym.details.toLowerCase().includes(searchInput.toLowerCase()) ||
-        gym.owner.name.toLowerCase().includes(searchInput.toLowerCase()) ||
-        this.searchEquipmentList(gym.equipmentList, searchInput) ||
-        this.searchAmenityList(gym.amenityList, searchInput)
+        gym.details.toLowerCase().includes(searchInput.toLowerCase())
+        // gym.owner.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+        // this.searchEquipmentList(gym.equipmentList, searchInput) ||
+        // this.searchAmenityList(gym.amenityList, searchInput)
       );
       console.log("findGyms method filtering by: " + searchInput);
       console.log(this.filteredGymList);
