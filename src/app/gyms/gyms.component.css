@@ -22,3 +22,7 @@
     font-weight: bold;
     font-size: x-large;
 }
+
+.max-width-custom {
+    max-width: 600px;
+  }  
