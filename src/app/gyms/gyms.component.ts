@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Gym } from '../models/gym.model';
 import { ApiService } from '../services/api.service';
 import { Router } from '@angular/router';

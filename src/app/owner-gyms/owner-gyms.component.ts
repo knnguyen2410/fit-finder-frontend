@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Gym } from '../models/gym.model';
 import { ApiService } from '../services/api.service';
+import { Owner } from '../models/owner.model';
 
 @Component({
   selector: 'app-owner-gyms',
@@ -9,7 +10,14 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./owner-gyms.component.css']
 })
 export class OwnerGymsComponent implements OnInit{
-  owner: any;
+  owner: Owner = {
+    id: 0,
+    name: '',
+    email: '',
+    password: '',
+    image: ''
+  };
+  
   ownerGymList: Gym[] = [];
 
   constructor(private route: ActivatedRoute, private apiService: ApiService){}

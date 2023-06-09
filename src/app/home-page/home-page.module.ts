@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,10 +22,12 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   exports: [
-    SearchBarComponent
+    SearchBarComponent,
+    SearchResultComponent
   ]
 })
 export class HomePageModule { }

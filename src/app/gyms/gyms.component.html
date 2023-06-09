@@ -1,55 +1,55 @@
 <div class="album py-5">
   <div class="container-lg">
 
-    <div *ngIf="hasJWT() == true" class="d-flex justify-content-center align-items-center container-form">
-      <main class="form-signin w-100 m-auto max-width-custom">
-        <form (ngSubmit)="onSubmit()">
-          <h1 class="h3 mb-3 fw-normal text-center">Create A Gym</h1>
-          <br>
-          <div class="form-floating">
-            <input [(ngModel)]="createdGym.name" name="name" type="text" class="bg-dark form-control text-white" id="floatingName" placeholder="Gym Name">
-            <label for="floatingName">Gym Name</label>
-          </div>
-          <div class="form-floating">
-            <input [(ngModel)]="createdGym.category" name="category" type="text" class="bg-dark form-control text-white" id="floatingCategory" placeholder="Category">
-            <label for="floatingCategory">Category</label>
-          </div>
-          <div class="form-floating">
-            <input [(ngModel)]="createdGym.addressStreet" name="addressStreet" type="text" class="bg-dark form-control text-white" id="floatingAddressStreet" placeholder="Street Address">
-            <label for="floatingAddressStreet">Street Address</label>
-          </div>
-          <div class="form-floating">
-            <input [(ngModel)]="createdGym.addressCity" name="addressCity" type="text" class="bg-dark form-control text-white" id="floatingAddressCity" placeholder="City">
-            <label for="floatingAddressCity">City</label>
-          </div>
-          <div class="form-floating">
-            <input [(ngModel)]="createdGym.addressState" name="addressState" type="text" class="bg-dark form-control text-white" id="floatingAddressState" placeholder="State">
-            <label for="floatingAddressState">State</label>
-          </div>
-          <div class="form-floating">
-            <input [(ngModel)]="createdGym.addressZip" name="addressZip" type="text" class="bg-dark form-control text-white" id="floatingAddressZip" placeholder="Zip">
-            <label for="floatingAddressZip">Zip</label>
-          </div>
-          <div class="form-floating">
-            <input [(ngModel)]="createdGym.hours" name="hours" type="text" class="bg-dark form-control text-white" id="floatingHours" placeholder="Gym Hours">
-            <label for="floatingHours">Gym Hours</label>
-          </div>
-          <div class="form-floating">
-            <input [(ngModel)]="createdGym.phone" name="phone" type="text" class="bg-dark form-control text-white" id="floatingPhone" placeholder="Gym Phone">
-            <label for="floatingPhone">Gym Phone</label>
-          </div>
-          <div class="form-floating">
-            <input [(ngModel)]="createdGym.details" name="details" type="text" class="bg-dark form-control text-white" id="floatingDetails" placeholder="Gym Details">
-            <label for="floatingDetails">Gym Details</label>
-          </div>
-          <div class="form-floating">
-            <input [(ngModel)]="createdGym.image" name="image" type="text" class="bg-dark form-control text-white" id="floatingImage" placeholder="Gym Image">
-            <label for="floatingImage">Gym Image</label>
-          </div>
-          <button class="btn btn-secondary w-100 py-2" type="submit">Create</button>
-        </form>
-      </main>
-    </div>
+      <div *ngIf="hasJWT() == true" class="d-flex justify-content-center align-items-center container-form">
+        <main class="form-signin w-100 m-auto max-width-custom">
+          <form (ngSubmit)="onSubmit()">
+            <h1 class="h3 mb-3 fw-normal text-center">Create A Gym</h1>
+            <br>
+            <div class="form-floating">
+              <input [(ngModel)]="createdGym.name" name="name" type="text" class="bg-dark form-control text-white" id="floatingName" placeholder="Gym Name">
+              <label for="floatingName">Gym Name</label>
+            </div>
+            <div class="form-floating">
+              <input [(ngModel)]="createdGym.category" name="category" type="text" class="bg-dark form-control text-white" id="floatingCategory" placeholder="Category">
+              <label for="floatingCategory">Category</label>
+            </div>
+            <div class="form-floating">
+              <input [(ngModel)]="createdGym.addressStreet" name="addressStreet" type="text" class="bg-dark form-control text-white" id="floatingAddressStreet" placeholder="Street Address">
+              <label for="floatingAddressStreet">Street Address</label>
+            </div>
+            <div class="form-floating">
+              <input [(ngModel)]="createdGym.addressCity" name="addressCity" type="text" class="bg-dark form-control text-white" id="floatingAddressCity" placeholder="City">
+              <label for="floatingAddressCity">City</label>
+            </div>
+            <div class="form-floating">
+              <input [(ngModel)]="createdGym.addressState" name="addressState" type="text" class="bg-dark form-control text-white" id="floatingAddressState" placeholder="State">
+              <label for="floatingAddressState">State</label>
+            </div>
+            <div class="form-floating">
+              <input [(ngModel)]="createdGym.addressZip" name="addressZip" type="text" class="bg-dark form-control text-white" id="floatingAddressZip" placeholder="Zip">
+              <label for="floatingAddressZip">Zip</label>
+            </div>
+            <div class="form-floating">
+              <input [(ngModel)]="createdGym.hours" name="hours" type="text" class="bg-dark form-control text-white" id="floatingHours" placeholder="Gym Hours">
+              <label for="floatingHours">Gym Hours</label>
+            </div>
+            <div class="form-floating">
+              <input [(ngModel)]="createdGym.phone" name="phone" type="text" class="bg-dark form-control text-white" id="floatingPhone" placeholder="Gym Phone">
+              <label for="floatingPhone">Gym Phone</label>
+            </div>
+            <div class="form-floating">
+              <input [(ngModel)]="createdGym.details" name="details" type="text" class="bg-dark form-control text-white" id="floatingDetails" placeholder="Gym Details">
+              <label for="floatingDetails">Gym Details</label>
+            </div>
+            <div class="form-floating">
+              <input [(ngModel)]="createdGym.image" name="image" type="text" class="bg-dark form-control text-white" id="floatingImage" placeholder="Gym Image">
+              <label for="floatingImage">Gym Image</label>
+            </div>
+            <button class="btn btn-secondary w-100 py-2" type="submit">Create</button>
+          </form>
+        </main>
+      </div>
 
     <br>
     <br>
@@ -58,6 +58,7 @@
     <app-search-bar></app-search-bar>
   </div>
   <br>
+
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col" *ngFor="let gym of gymList">
@@ -77,4 +78,5 @@
         </div>
       </div>
     </div>
+
   </div>

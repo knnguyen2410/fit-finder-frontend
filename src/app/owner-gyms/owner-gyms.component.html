@@ -3,13 +3,13 @@
   <h1 class="gyms-title">{{owner.name}}'s Gyms</h1>
   <br>
   <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div *ngIf="ownerGymList" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
       <div class="col" *ngFor="let gym of ownerGymList">
         <div class="card shadow-sm mb-4">
           <img class="bd-placeholder-img card-img-top" src="{{gym.image}}" alt="Thumbnail">
           <div class="card-body">
-            <h1>{{gym.name}}</h1>
+            <h1>{{ gym.name }}</h1>
             <h4>{{ gym.category }}</h4>
             <p>{{ gym.details }}</p>
             <div class="d-flex justify-content-center align-items-center">

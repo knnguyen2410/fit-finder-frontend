@@ -12,7 +12,7 @@ import { AmenitiesComponent } from './amenities/amenities.component';
 import { SearchResultComponent } from './home-page/search-result/search-result.component';
 import { HomeComponent } from './home-page/home/home.component';
 import { WildcardComponent } from './wildcard/wildcard.component';
-import { FormsModule } from '@angular/forms';
+import { HomePageModule } from './home-page/home-page.module';
 
 const routes: Routes = [
   {
@@ -81,7 +81,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), FormsModule],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
