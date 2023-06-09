@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SearchBarComponent } from './search-bar.component';
 import { FormsModule } from '@angular/forms';
 import { GymComponent } from 'src/app/gym/gym.component';

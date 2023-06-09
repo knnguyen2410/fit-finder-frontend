@@ -13,6 +13,9 @@ export class FeaturedGymsComponent implements OnInit {
 
   constructor(private apiService: ApiService){}
 
+  /**
+   * Initializes the component and retrieves the list of featured gyms from the API.
+   */
   ngOnInit(){
     this.apiService.getAllGyms().subscribe((gyms: any) => {
       this.gymList = gyms

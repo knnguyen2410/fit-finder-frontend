@@ -12,7 +12,6 @@ import { AmenitiesComponent } from './amenities/amenities.component';
 import { SearchResultComponent } from './home-page/search-result/search-result.component';
 import { HomeComponent } from './home-page/home/home.component';
 import { WildcardComponent } from './wildcard/wildcard.component';
-import { HomePageModule } from './home-page/home-page.module';
 
 const routes: Routes = [
   {

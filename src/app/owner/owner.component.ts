@@ -19,6 +19,10 @@ export class OwnerComponent implements OnInit {
   
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 
+  /**
+   * Lifecycle hook that is called after the component is initialized.
+   * Retrieves the owner details based on the provided owner ID from the route parameters.
+   */
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const paramId: string = params.get('ownerId') || '';

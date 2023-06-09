@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../services/api.service';
 import { Owner } from '../models/owner.model';
-import { Gym } from '../models/gym.model';
 
 @Component({
   selector: 'app-gym',
@@ -19,6 +18,9 @@ export class GymComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 
+  /**
+   * Initializes the component and retrieves the gym and owner data from the API.
+   */
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const paramId: string = params.get('gymId') || '';
@@ -36,6 +38,9 @@ export class GymComponent implements OnInit {
     });
   }
   
+  /**
+   * Submits the form to delete the current gym.
+   */
   onSubmit() {
     if (this.hasJWT()) {
           this.apiService.deleteGymById(this.currentGymId).subscribe((deleteResponse: any) => {
@@ -45,6 +50,10 @@ export class GymComponent implements OnInit {
     }
   }  
 
+  /**
+   * Checks if a JSON Web Token (JWT) is present in local storage.
+   * @returns True if a JWT is present, false otherwise.
+   */
   hasJWT(): boolean {
     let jwt = localStorage.getItem('jwt');
     return jwt !== null && jwt !== undefined && jwt !== '';

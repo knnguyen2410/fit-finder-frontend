@@ -30,6 +30,9 @@ export class EquipmentAllComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private apiService: ApiService){}
 
+  /**
+   * Initializes the component and retrieves the gym and equipment data from the API.
+   */
   ngOnInit() {
     this.route.parent?.paramMap.subscribe(params => {
       const paramId: string = params.get('gymId') || '';
@@ -52,6 +55,9 @@ export class EquipmentAllComponent implements OnInit {
     });
   }
 
+  /**
+   * Submits the form to create new equipment for the current gym.
+   */
   onSubmit(){
     if (this.hasJWT() == true) {
         this.apiService.createEquipmentByGymId(this.currentGymId, this.createdEquipment).subscribe((response: any) => {
@@ -61,6 +67,10 @@ export class EquipmentAllComponent implements OnInit {
     }
   }
 
+  /**
+   * Deletes the specified equipment from the current gym.
+   * @param currentEquipmentId - The ID of the equipment to be deleted.
+   */
   deleteEquipment(currentEquipmentId: number) {
     if (this.hasJWT()) {
           this.apiService.deleteEquipmentByGymId(this.currentGymId, currentEquipmentId).subscribe((response: any) => {
@@ -70,6 +80,10 @@ export class EquipmentAllComponent implements OnInit {
     }
   }  
 
+  /**
+   * Checks if a JSON Web Token (JWT) is present in local storage.
+   * @returns True if a JWT is present, false otherwise.
+   */
   hasJWT(): boolean {
     let jwt = localStorage.getItem('jwt');
     return jwt !== null && jwt !== undefined && jwt !== '';

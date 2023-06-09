@@ -11,6 +11,7 @@ import { Owner } from '../models/owner.model';
 export class RegisterComponent implements OnInit {
   ownerList: Owner[] = [];
 
+  // The owner data for registration.
   owner: Owner = {
     id: 0,
     name: '',
@@ -19,8 +20,17 @@ export class RegisterComponent implements OnInit {
     image: ''
   }
 
+  /**
+   * Creates an instance of the RegisterComponent.
+   * @param router The router service.
+   * @param apiService The API service for making requests.
+   */
   constructor(private router: Router, private apiService: ApiService){}
 
+  /**
+   * Lifecycle hook that is called after the component is initialized.
+   * Retrieves the list of owners from the API.
+   */
   ngOnInit(){
     this.apiService.getAllOwners().subscribe((owners: any) => {
       this.ownerList = owners;
@@ -28,6 +38,11 @@ export class RegisterComponent implements OnInit {
     });
   }
 
+  /**
+   * Handles the form submission for owner registration.
+   * Calls the API service to register the owner.
+   * If registration is successful, navigates to the owner login page.
+   */
   onSubmit() {
     this.apiService.register(this.owner).subscribe((response: any) => {
       console.log(response);

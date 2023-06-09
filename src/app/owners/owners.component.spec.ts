@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { OwnersComponent } from './owners.component';
 
 describe('OwnersComponent', () => {

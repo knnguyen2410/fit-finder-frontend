@@ -11,6 +11,11 @@ export class SearchBarComponent {
 
   constructor(private router: Router) {}
 
+  /**
+   * Performs a search based on the provided search input.
+   * Navigates to the search results page with the search input as a query parameter.
+   * @param searchInput - The search input string.
+   */
   searchFunction(searchInput: string): void {
     this.router.navigate(['/search'], {
       queryParams: { searchBy: searchInput }

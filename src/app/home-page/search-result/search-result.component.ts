@@ -22,6 +22,11 @@ export class SearchResultComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private apiService: ApiService){}
 
+  /**
+   * Initializes the SearchResultComponent.
+   * Retrieves all gyms, equipment, and amenities from the API service.
+   * Subscribes to the query parameters to perform a search based on the provided search input.
+   */
   ngOnInit() {
     this.filteredGymList = [];
     this.filteredEquipmentList = [];
@@ -51,34 +56,11 @@ export class SearchResultComponent implements OnInit {
     });
   }
 
-  // searchFunction(searchInput: string): void {
-  //   console.log("findGyms method filtering by: " + searchInput);
-    
-  //     this.filteredGymList = this.allGymList.filter(gym =>
-  //       gym.name.toLowerCase().includes(searchInput.toLowerCase()) ||
-  //       gym.category.toLowerCase().includes(searchInput.toLowerCase()) ||
-  //       gym.addressCity.toLowerCase().includes(searchInput.toLowerCase()) ||
-  //       gym.details.toLowerCase().includes(searchInput.toLowerCase())
-  //     );
-  //     console.log(this.filteredGymList);
-
-  //     this.filteredEquipmentList = this.allEquipmentList.filter(equipment => 
-  //       equipment.category.toLowerCase().includes(searchInput.toLowerCase()) ||
-  //       equipment.brand.toLowerCase().includes(searchInput.toLowerCase()) ||
-  //       equipment.name.toLowerCase().includes(searchInput.toLowerCase()) ||
-  //       equipment.details.toLowerCase().includes(searchInput.toLowerCase())
-  //     );
-  //     console.log(this.filteredEquipmentList);
-    
-  //     this.filteredAmenityList = this.allAmenityList.filter(amenity => 
-  //       amenity.category.toLowerCase().includes(searchInput.toLowerCase()) ||
-  //       amenity.subcategory.toLowerCase().includes(searchInput.toLowerCase()) ||
-  //       amenity.name.toLowerCase().includes(searchInput.toLowerCase()) ||
-  //       amenity.details.toLowerCase().includes(searchInput.toLowerCase())
-  //     );
-  //     console.log(this.filteredAmenityList);
-  // }
-
+  /**
+   * Performs the search based on the provided search input.
+   * Updates the filteredGymList based on the search results.
+   * @param searchInput - The search input string.
+   */
   searchFunction(searchInput: string): void {
     this.filteredGymList = this.allGymList.filter(gym =>
       gym.name.toLowerCase().includes(searchInput.toLowerCase()) ||
@@ -93,21 +75,33 @@ export class SearchResultComponent implements OnInit {
     console.log(this.filteredGymList);
 }
 
-searchEquipmentList(equipmentList: Equipment[], searchInput: string): boolean {
-  return equipmentList.some(equipment =>
-    equipment.category.toLowerCase().includes(searchInput.toLowerCase()) ||
-    equipment.brand.toLowerCase().includes(searchInput.toLowerCase()) ||
-    equipment.name.toLowerCase().includes(searchInput.toLowerCase()) ||
-    equipment.details.toLowerCase().includes(searchInput.toLowerCase())
-  );
-}
+  /**
+   * Searches the equipment list for a match with the provided search input.
+   * @param equipmentList - The equipment list to search in.
+   * @param searchInput - The search input string.
+   * @returns A boolean indicating whether a match was found in the equipment list.
+   */
+  searchEquipmentList(equipmentList: Equipment[], searchInput: string): boolean {
+    return equipmentList.some(equipment =>
+      equipment.category.toLowerCase().includes(searchInput.toLowerCase()) ||
+      equipment.brand.toLowerCase().includes(searchInput.toLowerCase()) ||
+      equipment.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+      equipment.details.toLowerCase().includes(searchInput.toLowerCase())
+    );
+  }
 
-searchAmenityList(amenityList: Amenity[], searchInput: string): boolean {
-  return amenityList.some(amenity =>
-    amenity.category.toLowerCase().includes(searchInput.toLowerCase()) ||
-    amenity.subcategory.toLowerCase().includes(searchInput.toLowerCase()) ||
-    amenity.name.toLowerCase().includes(searchInput.toLowerCase()) ||
-    amenity.details.toLowerCase().includes(searchInput.toLowerCase())
-  );
-}
+  /**
+   * Searches the amenity list for a match with the provided search input.
+   * @param amenityList - The amenity list to search in.
+   * @param searchInput - The search input string.
+   * @returns A boolean indicating whether a match was found in the amenity list.
+   */
+  searchAmenityList(amenityList: Amenity[], searchInput: string): boolean {
+    return amenityList.some(amenity =>
+      amenity.category.toLowerCase().includes(searchInput.toLowerCase()) ||
+      amenity.subcategory.toLowerCase().includes(searchInput.toLowerCase()) ||
+      amenity.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+      amenity.details.toLowerCase().includes(searchInput.toLowerCase())
+    );
+  }
 }

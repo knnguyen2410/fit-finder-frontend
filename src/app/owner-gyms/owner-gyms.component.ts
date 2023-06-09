@@ -22,6 +22,10 @@ export class OwnerGymsComponent implements OnInit{
 
   constructor(private route: ActivatedRoute, private apiService: ApiService){}
 
+   /**
+   * Lifecycle hook that is called after the component is initialized.
+   * Retrieves the owner details and the list of gyms owned by the owner from the API.
+   */
   ngOnInit() {
     this.route.parent?.paramMap.subscribe(params => {
       const paramId: string = params.get('ownerId') || '';

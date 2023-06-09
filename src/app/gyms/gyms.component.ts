@@ -41,6 +41,9 @@ export class GymsComponent implements OnInit {
 
   constructor(private router: Router, private apiService: ApiService){}
 
+  /**
+   * Initializes the component and retrieves the list of gyms and owners from the API.
+   */
   ngOnInit(): void {
     this.apiService.getAllGyms().subscribe((gyms: any) => {
       this.gymList = gyms
@@ -53,6 +56,9 @@ export class GymsComponent implements OnInit {
     });
   }
 
+  /**
+   * Submits the form to create a new gym.
+   */
   onSubmit(){
     if (this.hasJWT() == true) {
       let loggedInOwner = this.ownerList.find(owner => owner.email === localStorage.getItem('email'));
@@ -73,6 +79,10 @@ export class GymsComponent implements OnInit {
     }
   }
 
+  /**
+   * Checks if a JSON Web Token (JWT) is present in local storage.
+   * @returns True if a JWT is present, false otherwise.
+   */
   hasJWT(): boolean {
     let jwt = localStorage.getItem('jwt');
     return jwt !== null && jwt !== undefined && jwt !== '';

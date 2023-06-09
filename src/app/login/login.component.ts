@@ -17,6 +17,10 @@ export class LoginComponent {
   
   constructor(private router: Router, private apiService: ApiService){}
 
+  /**
+   * Initializes the LoginComponent.
+   * Retrieves the list of owners from the API service.
+   */
   ngOnInit(){
     this.apiService.getAllOwners().subscribe((owners: any) => {
       this.ownerList = owners;
@@ -24,6 +28,12 @@ export class LoginComponent {
     });
   }
 
+  /**
+   * Handles the form submission event.
+   * Performs user login by calling the API service's login method.
+   * Stores the email and JWT in the local storage.
+   * Navigates to the owner's page if login is successful.
+   */
   onSubmit() {
     this.apiService.login(this.loginRequest).subscribe((data: any) => 
       {
@@ -41,6 +51,10 @@ export class LoginComponent {
       });
   }
 
+  /**
+   * Checks if a JSON Web Token (JWT) is present in the local storage.
+   * @returns A boolean indicating whether a JWT is present.
+   */
   hasJWT(): boolean {
     let jwt = localStorage.getItem('jwt');
     return jwt !== null && jwt !== undefined && jwt !== '';
