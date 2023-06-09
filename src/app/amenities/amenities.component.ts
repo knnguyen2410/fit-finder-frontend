@@ -59,6 +59,15 @@ export class AmenitiesComponent implements OnInit {
       }
     }
 
+    deleteAmenity(currentAmenityId: number) {
+      if (this.hasJWT()) {
+            this.apiService.deleteAmenityByGymId(this.currentGymId, currentAmenityId).subscribe((response: any) => {
+              location.reload();
+              console.log(response);
+        });
+      }
+    }  
+
   hasJWT(): boolean {
     let jwt = localStorage.getItem('jwt');
     return jwt !== null && jwt !== undefined && jwt !== '';

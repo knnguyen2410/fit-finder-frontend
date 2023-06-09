@@ -50,7 +50,7 @@
                   <p>Quantity: {{ equipment.quantity }}</p>
                   <div *ngIf="hasJWT() == true">
                     <a routerLink="/gyms/{{gym.id}}/equipment">          
-                      <button (click)="deleteEquipment(equipment.id)" class="ms-5 btn btn-light">Delete Equipment</button>
+                      <button (click)="deleteEquipment(equipment.id)" class="ms-5 btn btn-light">Delete</button>
                     </a>
               </div>
             </div>

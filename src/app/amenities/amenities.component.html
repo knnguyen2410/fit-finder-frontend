@@ -47,7 +47,12 @@
                   <h1>{{ amenity.name }}</h1>
                   <h4>{{ amenity.category }}: {{ amenity.subcategory }}</h4>
                   <p>{{ amenity.details }}</p>
-                  <p class="text-end">Available: {{ amenity.quantity }}</p>
+                  <p>Quantity: {{ amenity.quantity }}</p>
+                  <div *ngIf="hasJWT() == true">
+                    <a routerLink="/gyms/{{gym.id}}/amenities">          
+                      <button (click)="deleteAmenity(amenity.id)" class="ms-5 btn btn-light">Delete</button>
+                    </a>
+              </div>
               </div>
             </div>
           </div>
