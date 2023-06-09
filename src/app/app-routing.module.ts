@@ -11,6 +11,7 @@ import { EquipmentAllComponent } from './equipment-all/equipment-all.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
 import { SearchResultComponent } from './home-page/search-result/search-result.component';
 import { HomeComponent } from './home-page/home/home.component';
+import { WildcardComponent } from './wildcard/wildcard.component';
 
 const routes: Routes = [
   {
@@ -71,7 +72,11 @@ const routes: Routes = [
   {
     path: 'search',
     component: SearchResultComponent
-  }
+  },
+  {
+    path: '**',
+    component: WildcardComponent,
+  },
 ];
 
 @NgModule({

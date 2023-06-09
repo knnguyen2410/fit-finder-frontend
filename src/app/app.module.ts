@@ -18,6 +18,7 @@ import { OwnerGymsComponent } from './owner-gyms/owner-gyms.component';
 import { EquipmentAllComponent } from './equipment-all/equipment-all.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
 import { FormsModule } from '@angular/forms';
+import { WildcardComponent } from './wildcard/wildcard.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     OwnerComponent,
     OwnerGymsComponent,
     EquipmentAllComponent,
-    AmenitiesComponent
+    AmenitiesComponent,
+    WildcardComponent
   ],
   imports: [
     BrowserModule,
