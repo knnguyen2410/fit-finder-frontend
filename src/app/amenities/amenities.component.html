@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="album py-5">
+    <div *ngIf="hasJWT() == true" class="d-flex justify-content-center align-items-center container-form">
+      <main class="form-signin w-100 m-auto max-width-custom">
+        <form (ngSubmit)="onSubmit()">
+          <h1 class="gyms-title">Create An Amenity</h1>
+          <br>
+          <div class="form-floating">
+            <input [(ngModel)]="createdAmenity.category" name="category" type="text" class="bg-dark form-control text-white" id="floatingCategory" placeholder="Amenity Category">
+            <label for="floatingCategory">Amenity Category</label>
+          </div>
+          <div class="form-floating">
+            <input [(ngModel)]="createdAmenity.subcategory" name="subcategory" type="text" class="bg-dark form-control text-white" id="floatingSubcategory" placeholder="Amenity Subcategory">
+            <label for="floatingSubcategory">Amenity Subcategory</label>
+          </div>
+          <div class="form-floating">
+            <input [(ngModel)]="createdAmenity.name" name="name" type="text" class="bg-dark form-control text-white" id="floatingName" placeholder="Amenity Name">
+            <label for="floatingName">Amenity Name</label>
+          </div>
+          <div class="form-floating">
+            <input [(ngModel)]="createdAmenity.quantity" name="quantity" type="text" class="bg-dark form-control text-white" id="floatingQuantity" placeholder="Amenity Quantity">
+            <label for="floatingQuantity">Amenity Quantity</label>
+          </div>
+          <div class="form-floating">
+            <input [(ngModel)]="createdAmenity.details" name="details" type="text" class="bg-dark form-control text-white" id="floatingDetails" placeholder="Amenity Details">
+            <label for="floatingDetails">Amenity Details</label>
+          </div>
+          <div class="form-floating">
+            <input [(ngModel)]="createdAmenity.image" name="image" type="text" class="bg-dark form-control text-white" id="floatingImage" placeholder="Amenity Image">
+            <label for="floatingImage">Amenity Image</label>
+          </div>
+          <button class="btn btn-secondary w-100 py-2" type="submit">Create</button>
+        </form>
+      </main>
+    </div>
+    <br>
+    <br>
+      <h1 class="gyms-title">All Amenities</h1>
+      <br>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col" *ngFor="let amenity of amenityList">
+            <div class="card shadow-sm mb-4">
+              <img class="bd-placeholder-img card-img-top" src="{{amenity.image}}" alt="Thumbnail">
+              <div class="card-body">
+                  <h1>{{ amenity.name }}</h1>
+                  <h4>{{ amenity.category }}: {{ amenity.subcategory }}</h4>
+                  <p>{{ amenity.details }}</p>
+                  <p>Quantity: {{ amenity.quantity }}</p>
+                  <div *ngIf="hasJWT() == true">
+                    <a routerLink="/gyms/{{gym.id}}/amenities">          
+                      <button (click)="deleteAmenity(amenity.id)" class="ms-5 btn btn-light">Delete</button>
+                    </a>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

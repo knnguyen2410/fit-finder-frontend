@@ -1,0 +1,28 @@
+<br>
+<br>
+<h1 class="gyms-title text-center">Search Results</h1>
+<br>
+<div class="container-lg">
+  <app-search-bar></app-search-bar>
+</div>
+<br>
+<div class="container-lg" *ngFor="let gym of filteredGymList">
+    <div class="container-lg">
+      <div class="row mb-2">
+        <div class="col-md-12">
+          <a routerLink="/gyms/{{gym.id}}">
+            <div class="gym-container row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col-auto d-none d-lg-block">
+                <img src="{{gym.image}}" alt="Thumbnail" width="200" height="125">
+              </div>
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">{{gym.name}}</h3>
+                  <p class="card-text mb-auto">{{gym.category}}</p>
+                  <p class="card-text mb-auto">{{gym.details}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>

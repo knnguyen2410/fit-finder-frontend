@@ -1,0 +1,15 @@
+.contents {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+}
+  

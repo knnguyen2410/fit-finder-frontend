@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="album py-5">
+    <div *ngIf="hasJWT() == true" class="d-flex justify-content-center align-items-center container-form">
+      <main class="form-signin w-100 m-auto max-width-custom">
+        <form (ngSubmit)="onSubmit()">
+          <h1 class="gyms-title">Create Equipment</h1>
+          <br>
+          <div class="form-floating">
+            <input [(ngModel)]="createdEquipment.category" name="category" type="text" class="bg-dark form-control text-white" id="floatingCategory" placeholder="Equipment Category">
+            <label for="floatingCategory">Equipment Category</label>
+          </div>
+          <div class="form-floating">
+            <input [(ngModel)]="createdEquipment.brand" name="brand" type="text" class="bg-dark form-control text-white" id="floatingBrand" placeholder="Equipment Brand">
+            <label for="floatingBrand">Equipment Brand</label>
+          </div>
+          <div class="form-floating">
+            <input [(ngModel)]="createdEquipment.name" name="name" type="text" class="bg-dark form-control text-white" id="floatingName" placeholder="Equipment Name">
+            <label for="floatingName">Equipment Name</label>
+          </div>
+          <div class="form-floating">
+            <input [(ngModel)]="createdEquipment.quantity" name="quantity" type="text" class="bg-dark form-control text-white" id="floatingQuantity" placeholder="Equipment Quantity">
+            <label for="floatingQuantity">Equipment Quantity</label>
+          </div>
+          <div class="form-floating">
+            <input [(ngModel)]="createdEquipment.details" name="details" type="text" class="bg-dark form-control text-white" id="floatingDetails" placeholder="Equipment Details">
+            <label for="floatingDetails">Equipment Details</label>
+          </div>
+          <div class="form-floating">
+            <input [(ngModel)]="createdEquipment.image" name="image" type="text" class="bg-dark form-control text-white" id="floatingImage" placeholder="Equipment Image">
+            <label for="floatingImage">Equipment Image</label>
+          </div>
+          <button class="btn btn-secondary w-100 py-2" type="submit">Create</button>
+        </form>
+      </main>
+    </div>
+    <br>
+    <br>
+      <h1 class="gyms-title">All Equipment</h1>
+      <br>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col" *ngFor="let equipment of equipmentList">
+            <div class="card shadow-sm mb-4">
+              <img class="bd-placeholder-img card-img-top" src="{{equipment.image}}" alt="Thumbnail">
+              <div class="card-body">
+                  <h1>{{ equipment.name }}</h1>
+                  <h4>{{ equipment.category }}: {{ equipment.brand }}</h4>
+                  <p>{{ equipment.details }}</p>
+                  <p>Quantity: {{ equipment.quantity }}</p>
+                  <div *ngIf="hasJWT() == true">
+                    <a routerLink="/gyms/{{gym.id}}/equipment">          
+                      <button (click)="deleteEquipment(equipment.id)" class="ms-5 btn btn-light">Delete</button>
+                    </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

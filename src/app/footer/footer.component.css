@@ -1,0 +1,14 @@
+footer {
+    color: white;
+    background-color: black;
+}
+
+img {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.copyright {
+    color: white;
+    font-size: 15px;
+}

@@ -1,0 +1,28 @@
+.album {
+    text-align: center;
+}
+
+.card {
+    border-radius: 2px;
+    border-color: white;
+    border-radius: 5px;
+}
+
+.featured-gyms-container {
+    color: white;
+    text-align: center;
+}
+
+.card {
+    color: white;
+    background-color: black;
+}
+
+.card-text {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.max-width-custom {
+    max-width: 600px;
+  }  

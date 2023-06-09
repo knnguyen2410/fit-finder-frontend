@@ -1,0 +1,52 @@
+<br>
+<br>
+<main class="container">
+    <div *ngIf="gym" class="hero-container p-4 p-md-5 mb-4 rounded text-body-emphasis bg-dark">
+        <div class="col-lg-12 px-0 text-white">
+          <img src="{{ gym.image }}" alt="Thumbnail" class="hero-image">
+          <br>
+          <h1 class="display-4 fst-italic">{{ gym.name }}</h1>
+          <h3 class="fst-italic">{{ gym.category }}</h3>
+          <a routerLink="/owners/{{gym.owner.id}}/">
+            <p class="owner-link">Owned by {{ gym.owner.name }}</p>
+          </a>
+          <br>
+          <p class="lead mb-0">
+            {{ gym.details }}
+            <br>
+            {{ gym.hours }}
+          </p>
+          <br>
+          <p class="lead mb-0">
+            {{ gym.addressStreet }}
+            <br>
+            {{ gym.addressCity }}
+            {{ gym.addressState }}
+            {{ gym.addressZip }}
+            <br>
+            {{ gym.phone }}
+            </p>
+            <br>
+            <br>
+            <div class="text-center">
+              <div class="publicButtons">
+                <a routerLink="/gyms/{{gym.id}}/equipment">   
+                  <button type="button" class="ms-5 btn btn-light">See All Equipment</button>       
+                </a>
+    
+                <a routerLink="/gyms/{{gym.id}}/amenities">          
+                  <button type="button" class="ms-5 btn btn-light">See All Amenities</button>
+                </a>
+              </div>
+
+              <div *ngIf="hasJWT() == true">
+                <a routerLink="/gyms">          
+                  <button (click)="onSubmit()" class="ms-5 btn btn-light">Delete Gym</button>
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>      
+</main>
+
+<router-outlet></router-outlet>
