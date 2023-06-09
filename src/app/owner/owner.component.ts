@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../services/api.service';
+import { Owner } from '../models/owner.model';
 
 @Component({
   selector: 'app-owner',
@@ -8,7 +9,13 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./owner.component.css']
 })
 export class OwnerComponent implements OnInit {
-  owner: any;
+  owner: Owner = {
+    id: 0,
+    name: '',
+    email: '',
+    password: '',
+    image: ''
+  };
   
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 

@@ -12,6 +12,7 @@ export class RegisterComponent implements OnInit {
   ownerList: Owner[] = [];
 
   owner: Owner = {
+    id: 0,
     name: '',
     email: '',
     password: '',
@@ -32,7 +33,7 @@ export class RegisterComponent implements OnInit {
       console.log(response);
       console.log(this.owner);
 
-      if (response.id !== null) {
+      if (response.id !== 0) {
         this.router.navigate(['/owners/login']);
       }
     });

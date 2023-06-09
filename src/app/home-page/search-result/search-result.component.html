@@ -13,7 +13,7 @@
           <a routerLink="/gyms/{{gym.id}}">
             <div class="gym-container row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col-auto d-none d-lg-block">
-                <img src="{{gym.image}}" alt="image of the city" width="200" height="125">
+                <img src="{{gym.image}}" alt="Thumbnail" width="200" height="125">
               </div>
               <div class="col p-4 d-flex flex-column position-static">
                   <h3 class="mb-0">{{gym.name}}</h3>
@@ -26,3 +26,53 @@
       </div>
     </div>
   </div>
+<!-- 
+<br>
+<br>
+<h1 class="gyms-title text-center">Equipment Results</h1>
+<br>
+<div class="container-lg" *ngFor="let equipment of filteredEquipmentList">
+    <div class="container-lg">
+      <div class="row mb-2">
+        <div class="col-md-12">
+          <a routerLink="/gyms/{{gym.id}}">
+            <div class="gym-container row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col-auto d-none d-lg-block">
+                <img src="{{equipment.image}}" alt="Thumbnail" width="200" height="125">
+              </div>
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">{{equipment.name}}</h3>
+                  <p class="card-text mb-auto">{{equipment.category}}</p>
+                  <p class="card-text mb-auto">{{equipment.details}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br>
+<br>
+<h1 class="gyms-title text-center">Amenity Results</h1>
+<br>
+<div class="container-lg" *ngFor="let amenity of filteredAmenityList">
+    <div class="container-lg">
+      <div class="row mb-2">
+        <div class="col-md-12">
+          <a routerLink="/gyms/{{gym.id}}">
+            <div class="gym-container row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col-auto d-none d-lg-block">
+                <img src="{{amenity.image}}" alt="Thumbnail" width="200" height="125">
+              </div>
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">{{amenity.name}}</h3>
+                  <p class="card-text mb-auto">{{amenity.category}}</p>
+                  <p class="card-text mb-auto">{{amenity.details}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div> -->

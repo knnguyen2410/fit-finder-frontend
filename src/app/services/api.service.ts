@@ -42,11 +42,19 @@ export class ApiService {
   }
 
   // equipment
+  getAllEquipment() {
+    return this.http.get(`http://localhost:8080/api/equipment`);
+  }
+
   getAllEquipmentByGymId(gymId: number) {
     return this.http.get(`http://localhost:8080/api/gyms/${gymId}/equipment`);
   }
 
   // amenity
+  getAllAmenities() {
+    return this.http.get(`http://localhost:8080/api/amenities`);
+  }
+
   getAllAmenitiesByGymId(gymId: number) {
     return this.http.get(`http://localhost:8080/api/gyms/${gymId}/amenities`);
   }
