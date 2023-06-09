@@ -1,4 +1,5 @@
 export interface Amenity {
+    id: number;
     category: string,
     subcategory: string,
     name: string,

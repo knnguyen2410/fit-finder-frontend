@@ -1,4 +1,5 @@
 export interface Equipment {
+    id: number;
     category: string,
     brand: string,
     name: string,

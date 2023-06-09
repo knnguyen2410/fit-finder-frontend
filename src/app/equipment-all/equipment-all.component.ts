@@ -13,10 +13,12 @@ import { Owner } from '../models/owner.model';
 export class EquipmentAllComponent implements OnInit {
   gym: any;
   equipmentList: Equipment[] = [];
+  currentEequipment: any;
   gymList: Gym[] = [];
   currentGymId: number = 0;
 
   createdEquipment: Equipment = {
+    id: 0,
     category: '',
     brand: '',
     name: '',
@@ -58,6 +60,15 @@ export class EquipmentAllComponent implements OnInit {
         }); 
     }
   }
+
+  deleteEquipment(currentEquipmentId: number) {
+    if (this.hasJWT()) {
+          this.apiService.deleteEquipmentByGymId(this.currentGymId, currentEquipmentId).subscribe((response: any) => {
+            location.reload();
+            console.log(response);
+      });
+    }
+  }  
 
   hasJWT(): boolean {
     let jwt = localStorage.getItem('jwt');

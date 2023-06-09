@@ -16,6 +16,7 @@ export class AmenitiesComponent implements OnInit {
   currentGymId: number = 0;
 
   createdAmenity: Amenity = {
+    id: 0,
     category: '',
     subcategory: '',
     name: '',
