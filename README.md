@@ -9,6 +9,7 @@
   - [Wireframes](#wireframes)
   - [Results](#results)
 - [Hurdles](#hurdles)
+- [Continuous Developemnt](#continuous-development)
 - [Credits](#credits)
   - [Sources](#sources)
   - [Acknowledgments](#acknowledgments)
@@ -154,32 +155,19 @@ To overcome these hurdles, I employed a proactive approach. I engaged in open co
 By embracing a proactive and collaborative mindset, I successfully navigated through the challenges encountered during the development process. These hurdles not only tested my technical skills but also provided valuable learning opportunities and fostered growth as a developer.
 
 ---
+# Continuous Development
 
+Here are additional features that I'd like to implement:
+- Gym owners can delete their account
+- Gym owners can update their account, gyms, equipment, and amenities
+- Categorize search results based on model
+- Hide gym-owner-visible buttons if the logged-in owner does not own the gym, equipment, or amenity
+- Show message if no gyms, equipment, or amenities are found
+- Include a link or form to sign up for a gym membership on the gym page
+- Integrate Google Maps API to show gym location
+- Hero video autoplay
 
-Silver:
-* Full CRUD.
-* Authentication.
-
-
-
-
-Future Features (create bronze, silver, gold)
-Future endpoints: Delete owner by id, Update gym, owner, equipment, amenity
-External link for signing up on their gym website
-Ai images - edge
-Open api to document endpoints
-Ai integration
-Google maps api - kevin
-Multi.tech
-Open API for api documentation
-Make hero image autoplay
-Sign up for membership
-& restricted components
-Add exceptions when there’s no gyms, equipment, or amenities
-Be able to gracefully handle exceptions when they occur. - no gyms/amenities/equipment found
-
-
-
+---
 
 # Credits
 
