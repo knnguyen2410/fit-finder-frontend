@@ -2,12 +2,16 @@
 
 ## Table of Contents
 - [Description](#description)
+  - [Features](#features)
 - [Technologies](#technologies)
     - [Installation Instructions](#installation-instructions)
 - [Development Process](#development-process)
+  - [Project Management](#project-management)
+  - [Entity Relationship Diagram](#entity-relationship-diagram)
   - [User Stories](#user-stories)
-  - [Wireframes](#wireframes)
-  - [Results](#results)
+  - [Endpoints](#endpoints)
+  - [Behaviour-Driven Development](#behaviour-driven-development)
+  - [Postman](#postman)
 - [Hurdles](#hurdles)
 - [Continuous Developemnt](#continuous-development)
 - [Credits](#credits)
@@ -18,12 +22,12 @@
 
 # Description
 
-Fit Finder aims to improve users' health by enhancing their fitness journey. Fit Finder serves to meet the needs of two user groups - gym goers and gym owners.
+Fit Finder aims to improve users' health by enhancing their fitness journey. This application serves to meet the needs of two user groups - gym goers and gym owners.
 Both groups can use Fit Finder to connect, find specific facilities and services, and grow their community.
-
-Fit Finder is an Angular application that allows users to access and manage gym data. 
-* Users can view gyms, as well as the equipment and amenities the gyms offer. 
+* Users can view gyms, as well as the equipment and amenities the gyms offer.
 * Gym owners can register for an account, allowing them to list their gyms and gym offerings.
+
+As a full-stack Java application, Fit Finder comprises an Angular frontend and Spring Boot API backend. The Fit Finder Angular application allows users to interact with a frontend webpage to visualize and access data.
 
 To see how this application handles data, check out the [Fit Finder API backend application](https://github.com/knnguyen2410/fit-finder-backend) which it communicates with.
 
