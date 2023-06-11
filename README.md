@@ -155,32 +155,6 @@ By embracing a proactive and collaborative mindset, I successfully navigated thr
 
 ---
 
-
-Silver:
-* Full CRUD.
-* Authentication.
-
-
-
-
-Future Features (create bronze, silver, gold)
-Future endpoints: Delete owner by id, Update gym, owner, equipment, amenity
-External link for signing up on their gym website
-Ai images - edge
-Open api to document endpoints
-Ai integration
-Google maps api - kevin
-Multi.tech
-Open API for api documentation
-Make hero image autoplay
-Sign up for membership
-& restricted components
-Add exceptions when there’s no gyms, equipment, or amenities
-Be able to gracefully handle exceptions when they occur. - no gyms/amenities/equipment found
-
-
-
-
 # Credits
 
 ## Sources
