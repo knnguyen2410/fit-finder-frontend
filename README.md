@@ -2,16 +2,14 @@
 
 ## Table of Contents
 - [Description](#description)
-  - [Features](#features)
 - [Technologies](#technologies)
     - [Installation Instructions](#installation-instructions)
 - [Development Process](#development-process)
   - [Project Management](#project-management)
-  - [Entity Relationship Diagram](#entity-relationship-diagram)
   - [User Stories](#user-stories)
-  - [Endpoints](#endpoints)
-  - [Behaviour-Driven Development](#behaviour-driven-development)
-  - [Postman](#postman)
+  - [Wireframes](#wireframes)
+  - [Results](#results)
+  - [Testing](#testing)
 - [Hurdles](#hurdles)
 - [Continuous Developemnt](#continuous-development)
 - [Credits](#credits)
@@ -71,10 +69,24 @@ After completing all the features, I revisited the application's styling. This a
 
 By adhering to this development process and adopting an agile mindset, I ensured that the Fit Finder Angular application was developed systematically, thoroughly tested, and met the requirements of the project.
 
+## Project Management
+
+[Github Projects](https://github.com/users/knnguyen2410/projects/3/views/3) was used for both frontend and backend components.
+
 ![Alt text](readme-images/kanban.png)
-[Github Projects](https://github.com/users/knnguyen2410/projects/3/views/3) was used for planning documentation, breaking down this project into deliverables and timelines, and scheduling.
+A **kanban board** was used to exercise agile methodology.
+Tasks were broken down and prioritized by which ones would contribute directly to the minimum viable product.
+By implementing an iterative approach to the software development cycle, deliverables were able to continually be rolled out.
+
+
+![Alt text](readme-images/roadmap.png)
+A **roadmap** was used to visualize the deliverables and timelines. 
+By creating a schedule, tasks were strategically organized to maximize time efficiency. 
+Assigning milestones to strict deadlines allowed for proper time management, task ownership, and a sense of accomplishment each day. 
 
 ## User Stories
+
+Below are the user stories for each model in the application:
 
 Owner
 - As an unregistered owner, I want to create an account, so that I can list my gyms.
@@ -101,6 +113,8 @@ Amenity
 
 ## Wireframes
 
+Below are the initial wireframes for the frontend single-page application. Creation of these wireframes considered user experience, user interface in both desktop and mobile format, and integration of key features.
+
 Home Page
 ![Alt text](readme-images/home-page.png)
 
@@ -118,11 +132,19 @@ Registration Page
 
 ## Results
 
+The resulting application stayed true to the initial wireframes. The webpage is responsive, ensuring a smooth user experience in both desktop and mobile format. If a gym owner is logged into their account, additional webpage functionality is unlocked.
+
 Home Page
 ![Alt text](readme-images/results/home.png)
 
 About Page
 ![Alt text](readme-images/results/about.png)
+
+Login Page
+![Alt text](readme-images/results/login.png)
+
+Register Page
+![Alt text](readme-images/results/register.png)
 
 Owner Profile Page
 ![Alt text](readme-images/results/ownerprofile.png)
@@ -138,11 +160,11 @@ Gym Profile Page         | Gym Profile Page (logged in)
 :-----------------------:|:----------------------:
 ![Alt text](readme-images/results/gymprofile.png) | ![Alt text](readme-images/results/gymprofile-loggedin.png)
 
-Login Page
-![Alt text](readme-images/results/login.png)
+## Testing
 
-Register Page
-![Alt text](readme-images/results/register.png)
+Proper testing convention was instrumental in the creation of Fit Finder Angular application. After each Angular component was created and integrated into the overall application, the Jasmine test was checked. Proper modules were then imported to ensure all Jasmine tests would pass before moving onto the next component's creation. This iterative development process ensured each Angular component's creation, routing, and nesting was properly addressed.
+
+![Alt text](readme-images/testing-jasmine.png)
 
 ---
 
