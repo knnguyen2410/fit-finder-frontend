@@ -8,8 +8,8 @@
   - [Project Management](#project-management)
   - [User Stories](#user-stories)
   - [Wireframes](#wireframes)
-  - [Results](#results)
   - [Testing](#testing)
+  - [Results](#results)
 - [Hurdles](#hurdles)
 - [Continuous Developemnt](#continuous-development)
 - [Credits](#credits)
@@ -130,6 +130,12 @@ Login Page
 Registration Page
 ![Alt text](readme-images/register-page.png)
 
+## Testing
+
+Proper testing convention was instrumental in the creation of Fit Finder Angular application. After each Angular component was created and integrated into the overall application, the Jasmine test was checked. Proper modules were then imported to ensure all Jasmine tests would pass before moving onto the next component's creation. This iterative development process ensured each Angular component's creation, routing, and nesting was properly addressed.
+
+![Alt text](readme-images/testing-jasmine.png)
+
 ## Results
 
 The resulting application stayed true to the initial wireframes. The webpage is responsive, ensuring a smooth user experience in both desktop and mobile format. If a gym owner is logged into their account, additional webpage functionality is unlocked.
@@ -159,12 +165,6 @@ All Gyms Page            | All Gyms Page (logged in)
 Gym Profile Page         | Gym Profile Page (logged in)
 :-----------------------:|:----------------------:
 ![Alt text](readme-images/results/gymprofile.png) | ![Alt text](readme-images/results/gymprofile-loggedin.png)
-
-## Testing
-
-Proper testing convention was instrumental in the creation of Fit Finder Angular application. After each Angular component was created and integrated into the overall application, the Jasmine test was checked. Proper modules were then imported to ensure all Jasmine tests would pass before moving onto the next component's creation. This iterative development process ensured each Angular component's creation, routing, and nesting was properly addressed.
-
-![Alt text](readme-images/testing-jasmine.png)
 
 ---
 
